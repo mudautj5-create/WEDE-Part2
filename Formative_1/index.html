@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kunyarungo AgriTech Solutions - Solar Powered Irrigation</title>
+
+    <style>
+        /* ================================
+           GLOBAL STYLES
+        ================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7f3;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ================================
+           HEADER
+        ================================== */
+
+        header {
+            background: linear-gradient(135deg, #12452a, #1b4d2f);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #f4c430;
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            transition: 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #f4c430;
+            left: 0;
+            bottom: -6px;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f4c430;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ================================
+           HERO SECTION
+        ================================== */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 4rem 1.5rem;
+
+            background:
+                linear-gradient(
+                    rgba(10, 55, 32, 0.82),
+                    rgba(10, 55, 32, 0.88)
+                ),
+                linear-gradient(
+                    135deg,
+                    #6b4423,
+                    #9a6b35
+                );
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "☀";
+            position: absolute;
+            font-size: 15rem;
+            color: rgba(244, 196, 48, 0.08);
+            top: -80px;
+            right: -50px;
+        }
+
+        .hero::after {
+            content: "🌱";
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.08;
+            bottom: -30px;
+            left: -20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.7rem);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: #f4f4f4;
+        }
+
+        /* ================================
+           BUTTON
+        ================================== */
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #f4c430;
+            color: #173d27;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #ffd84d;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ================================
+           MAIN CONTENT
+        ================================== */
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4rem 1.5rem;
+        }
+
+        /* ================================
+           INTRODUCTION
+        ================================== */
+
+        .introduction {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 4rem;
+            border-left: 6px solid #f4c430;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .introduction h2 {
+            color: #1b4d2f;
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .introduction p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .introduction p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ================================
+           FEATURES
+        ================================== */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+            border-top: 4px solid transparent;
+            transition: all 0.35s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-top-color: #f4c430;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f8f0cf;
+            font-size: 2.5rem;
+        }
+
+        .feature-card h3 {
+            color: #1b4d2f;
+            margin-bottom: 0.7rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* ================================
+           MISSION & VISION
+        ================================== */
+
+        .mission-vision {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(27, 77, 47, 0.97),
+                    rgba(20, 61, 38, 0.97)
+                );
+
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: 18px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .mission-vision h2 {
+            text-align: center;
+            color: #f4c430;
+            font-size: 2.3rem;
+            margin-bottom: 3rem;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .mission-vision-item {
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .mission-vision-item:hover {
+            background: rgba(255, 255, 255, 0.09);
+            transform: translateY(-5px);
+        }
+
+        .mission-vision-item h3 {
+            color: #f4c430;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-vision-item p {
+            line-height: 1.8;
+            color: #f1f1f1;
+        }
+
+        /* ================================
+           FOOTER
+        ================================== */
+
+        footer {
+            background: #102f1e;
+            color: #ddd;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer p:first-child {
+            color: #f4c430;
+            font-weight: 600;
+        }
+
+        /* ================================
+           ANIMATION
+        ================================== */
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================================
+           TABLET
+        ================================== */
+
+        @media (max-width: 900px) {
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header-container {
+                gap: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+
+        /* ================================
+           MOBILE
+        ================================== */
+
+        @media (max-width: 650px) {
+
+            header {
+                padding: 1rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem 1.2rem;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 2.5rem 1rem;
+            }
+
+            .introduction {
+                padding: 2rem 1.5rem;
+            }
+
+            .introduction h2 {
+                font-size: 1.6rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-vision {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .mission-vision h2 {
+                font-size: 1.8rem;
+            }
+
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                padding: 0.9rem 2rem;
+            }
+        }
+
+        /* ================================
+           SMALL PHONES
+        ================================== */
+
+        @media (max-width: 400px) {
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
+            nav a {
+                display: block;
+                padding: 0.25rem;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================================
+         HEADER
+    ================================== -->
+
+    <header>
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                ☀️ Kunyarungo AgriTech
+            </a>
+<!-- na-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Affordable Solar Irrigation
+                    for African Farmers
+                </h1>
+
+                <p>
+                    Empower your farm with sustainable,
+                    solar-powered water management solutions.
+                </p>
+
+                <a href="enquiry.html" class="cta-button">
+                    Enquire Now →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="introduction">
+
+            <h2>
+                Welcome to Kunyarungo AgriTech Solutions
+            </h2>
+
+            <p>
+                We design and supply affordable, solar-powered
+                irrigation and water management systems for
+                small-scale and emerging farmers.
+            </p>
+
+            <p>
+                Our mission is to empower farmers with sustainable
+                agricultural technology that improves crop yield
+                and water security while reducing reliance on
+                unpredictable rainfall and rising electricity costs.
+            </p>
+
+            <p>
+                Based in rural South Africa, we partner with
+                agricultural cooperatives, government agencies,
+                and NGOs to bring accessible renewable energy
+                solutions to farmers across Southern Africa.
+            </p>
+
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section class="features">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Water Management
+                </h3>
+
+                <p>
+                    Efficient irrigation systems designed for
+                    water scarcity and sustainable farming practices.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ☀️
+                </div>
+
+                <h3>
+                    Solar Powered
+                </h3>
+
+                <p>
+                    Renewable energy solutions that reduce
+                    electricity costs and environmental impact.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🌱
+                </div>
+
+                <h3>
+                    Sustainable Farming
+                </h3>
+
+                <p>
+                    Technology that improves crop yields while
+                    maintaining soil and water health.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Expert Support
+                </h3>
+
+                <p>
+                    Consultation services and ongoing support
+                    to maximize your farming success.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MISSION & VISION -->
+
+        <section class="mission-vision">
+
+            <h2>
+                Our Mission & Vision
+            </h2>
+
+            <div class="mission-vision-grid">
+
+                <div class="mission-vision-item">
+
+                    <h3>
+                        🎯 Mission
+                    </h3>
+
+                    <p>
+                        To empower small-scale and emerging farmers
+                        with affordable, sustainable agricultural
+                        technology that improves crop yield and
+                        water security.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-vision-item">
+
+                    <h3>
+                        👁️ Vision
+                    </h3>
+
+                    <p>
+                        To become a leading provider of accessible,
+                        renewable energy agricultural solutions
+                        across Southern Africa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Kunyarungo AgriTech Solutions.
+            All rights reserved.
+        </p>
+
+        <p>
+            Empowering farmers with sustainable technology |
+            South Africa-based
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry and quote request | Kunyarungo AgriTech Solutions</title>
+  <meta name="description" content="Send a product or service enquiry, or request a quote for a solar irrigation system sized for your farm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-label="Kunyarungo logo">
+          <circle cx="24" cy="18" r="9" fill="#F2B705"></circle>
+          <path d="M6 40c0-9 8-16 18-16s18 7 18 16z" fill="#2F7A4A"></path>
+          <path d="M24 40V26" stroke="#12301F" stroke-width="2.5" stroke-linecap="round"></path>
+        </svg>
+        <span class="brand-name">Kunyarungo AgriTech
+          <span>Solar irrigation and water management</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero hero-enquiry">
+      <div class="wrap hero-inner">
+        <hr class="sunbar">
+        <h1>Tell us about your water and your land.</h1>
+        <p>Six fields is all we need to size a system. We reply within two working days,
+           by phone or WhatsApp if that is easier for you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="media">
+          <div>
+            <hr class="sunbar">
+            <h2>Request a quote</h2>
+            <p>Fields marked <span class="required">*</span> are required. If you do not know
+               a figure, leave it out and we will work it out on the site visit.</p>
+
+            <form class="form" action="#" method="post">
+
+              <div class="field">
+                <label for="fullname">Full name <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" autocomplete="name" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone or WhatsApp number
+                  <span class="hint">Include the area code, for example 015 962 0114.</span>
+                </label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+              </div>
+
+              <div class="field">
+                <label for="farmlocation">Where is the farm? <span class="required">*</span>
+                  <span class="hint">Town or nearest village, and the province.</span>
+                </label>
+                <input type="text" id="farmlocation" name="farmlocation" required>
+              </div>
+
+              <div class="field">
+                <label for="plotsize">Plot size</label>
+                <select id="plotsize" name="plotsize">
+                  <option value="">Please choose</option>
+                  <option value="under-half">Under half a hectare</option>
+                  <option value="half-to-one">Half to one hectare</option>
+                  <option value="one-to-three">One to three hectares</option>
+                  <option value="three-to-ten">Three to ten hectares</option>
+                  <option value="over-ten">More than ten hectares</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="watersource">Current water source</label>
+                <select id="watersource" name="watersource">
+                  <option value="">Please choose</option>
+                  <option value="borehole">Borehole</option>
+                  <option value="river">River or stream</option>
+                  <option value="dam">Dam or reservoir</option>
+                  <option value="municipal">Municipal connection</option>
+                  <option value="rain">Rainfall only</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>What are you enquiring about?</legend>
+                <label class="check">
+                  <input type="checkbox" name="interest" value="garden-kit">
+                  Garden Kit
+                </label>
+                <label class="check">
+                  <input type="checkbox" name="interest" value="field-kit">
+                  Field Kit
+                </label>
+                <label class="check">
+                  <input type="checkbox" name="interest" value="cooperative-kit">
+                  Cooperative Kit
+                </label>
+                <label class="check">
+                  <input type="checkbox" name="interest" value="water-management">
+                  Water management package
+                </label>
+                <label class="check">
+                  <input type="checkbox" name="interest" value="maintenance">
+                  Maintenance of an existing system
+                </label>
+              </fieldset>
+
+              <div class="field">
+                <label for="message">Anything else we should know? <span class="required">*</span>
+                  <span class="hint">What you grow, how you irrigate now, and when you would like to start.</span>
+                </label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <label class="check">
+                <input type="checkbox" name="consent" value="yes" required>
+                I agree that Kunyarungo AgriTech Solutions may contact me about this enquiry
+                and store my details for that purpose. <span class="required">*</span>
+              </label>
+
+              <div class="btn-row">
+                <button class="btn" type="submit">Send enquiry</button>
+              </div>
+            </form>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1670519808965-16b9b2f724af?auto=format&fit=crop&w=1000&q=70"
+                 alt="Close view of a solar panel array seen from above">
+            <figcaption>Array sizing is the first thing we work out from your enquiry.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="wrap">
+        <hr class="sunbar">
+        <h2>What happens after you send it</h2>
+        <ol class="steps">
+          <li>
+            <div>
+              <strong>We confirm the same day</strong>
+              You get a short reply acknowledging the enquiry and a reference number.
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>We call you back</strong>
+              A technician phones to fill in anything missing and to book a site visit if
+              one is needed.
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>You receive a written quote</strong>
+              One installed price, a layout drawing and an expected daily water yield.
+            </div>
+          </li>
+        </ol>
+        <p>Prefer to speak to someone first? Our offices and phone numbers are on the
+           <a href="contact.html">contact page</a>.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>Kunyarungo AgriTech Solutions</h3>
+          <p>Affordable, sustainable irrigation technology for small scale and emerging
+             farmers across Southern Africa.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <address>
+            15 Mphephu Road, Thohoyandou, Limpopo 0950<br>
+            <a href="tel:+27159620114">015 962 0114</a><br>
+            <a href="mailto:info@kunyarungo.co.za">info@kunyarungo.co.za</a>
+          </address>
+        </div>
+      </div>
+      <p class="footer-note">This is a fictional organisation created for the WEDE5020
+         Building the Foundation project. Photographs are used under the Unsplash licence.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

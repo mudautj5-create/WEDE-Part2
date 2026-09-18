@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us | Kunyarungo AgriTech Solutions</title>
+  <meta name="description" content="Office addresses, phone numbers and maps for Kunyarungo AgriTech Solutions in Thohoyandou and Polokwane, plus a general contact form.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-label="Kunyarungo logo">
+          <circle cx="24" cy="18" r="9" fill="#F2B705"></circle>
+          <path d="M6 40c0-9 8-16 18-16s18 7 18 16z" fill="#2F7A4A"></path>
+          <path d="M24 40V26" stroke="#12301F" stroke-width="2.5" stroke-linecap="round"></path>
+        </svg>
+        <span class="brand-name">Kunyarungo AgriTech
+          <span>Solar irrigation and water management</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero hero-contact">
+      <div class="wrap hero-inner">
+        <hr class="sunbar">
+        <h1>Two offices, one service area, one phone number that answers.</h1>
+        <p>We cover Limpopo, Mpumalanga and northern Gauteng from Thohoyandou and Polokwane.</p>
+      </div>
+    </section>
+
+    <!-- ===== Office details ===== -->
+    <section class="section">
+      <div class="wrap">
+        <hr class="sunbar">
+        <h2>Where to find us</h2>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Thohoyandou (head office and workshop)</h3>
+            <address>
+              15 Mphephu Road<br>
+              Thohoyandou, Limpopo 0950<br><br>
+              Phone: <a href="tel:+27159620114">015 962 0114</a><br>
+              Email: <a href="mailto:info@kunyarungo.co.za">info@kunyarungo.co.za</a>
+            </address>
+            <p>Open Monday to Friday, 08:00 to 16:30. Saturdays 08:00 to 12:00 for spares
+               collection.</p>
+            <iframe class="map-frame"
+                    title="Map showing the Kunyarungo AgriTech office in Thohoyandou"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=30.4350%2C-22.9800%2C30.5350%2C-22.9200&amp;layer=mapnik&amp;marker=-22.9500%2C30.4850"
+                    loading="lazy"></iframe>
+          </article>
+
+          <article class="card">
+            <h3>Polokwane (sales and installations)</h3>
+            <address>
+              Unit 7, Cnr Grobler and Bok Street<br>
+              Polokwane, Limpopo 0700<br><br>
+              Phone: <a href="tel:+27152915508">015 291 5508</a><br>
+              Email: <a href="mailto:polokwane@kunyarungo.co.za">polokwane@kunyarungo.co.za</a>
+            </address>
+            <p>Open Monday to Friday, 08:00 to 17:00. Installation teams dispatch from here
+               on Tuesdays and Thursdays.</p>
+            <iframe class="map-frame"
+                    title="Map showing the Kunyarungo AgriTech office in Polokwane"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=29.4189%2C-23.9345%2C29.5189%2C-23.8745&amp;layer=mapnik&amp;marker=-23.9045%2C29.4689"
+                    loading="lazy"></iframe>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact form ===== -->
+    <section class="section section-tint">
+      <div class="wrap">
+        <hr class="sunbar">
+        <h2>Send us a message</h2>
+        <p class="lead">For a system quote, please use the
+           <a href="enquiry.html">enquiry form</a> instead so we can size it properly.
+           This form is for everything else.</p>
+
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="cname">Your name <span class="required">*</span></label>
+            <input type="text" id="cname" name="cname" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="cemail">Email address <span class="required">*</span></label>
+            <input type="email" id="cemail" name="cemail" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="cphone">Phone number</label>
+            <input type="tel" id="cphone" name="cphone" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="coffice">Which office should receive this?</label>
+            <select id="coffice" name="coffice">
+              <option value="thohoyandou">Thohoyandou</option>
+              <option value="polokwane">Polokwane</option>
+              <option value="unsure">I am not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="csubject">Subject <span class="required">*</span></label>
+            <input type="text" id="csubject" name="csubject" required>
+          </div>
+
+          <div class="field">
+            <label for="cmessage">Message <span class="required">*</span></label>
+            <textarea id="cmessage" name="cmessage" required></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn" type="submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Service area ===== -->
+    <section class="section">
+      <div class="wrap">
+        <hr class="sunbar">
+        <h2>Service area and callout fees</h2>
+        <div class="table-scroll">
+          <table>
+            <caption>Site visits are free within 80 km of either office.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Area</th>
+                <th scope="col">Nearest office</th>
+                <th scope="col">Site visit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Vhembe district</th>
+                <td>Thohoyandou</td>
+                <td>Free</td>
+              </tr>
+              <tr>
+                <th scope="row">Capricorn district</th>
+                <td>Polokwane</td>
+                <td>Free</td>
+              </tr>
+              <tr>
+                <th scope="row">Mopani and Sekhukhune</th>
+                <td>Polokwane</td>
+                <td>R450</td>
+              </tr>
+              <tr>
+                <th scope="row">Mpumalanga and northern Gauteng</th>
+                <td>Polokwane</td>
+                <td>Quoted per trip</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>Kunyarungo AgriTech Solutions</h3>
+          <p>Affordable, sustainable irrigation technology for small scale and emerging
+             farmers across Southern Africa.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <address>
+            15 Mphephu Road, Thohoyandou, Limpopo 0950<br>
+            <a href="tel:+27159620114">015 962 0114</a><br>
+            <a href="mailto:info@kunyarungo.co.za">info@kunyarungo.co.za</a>
+          </address>
+        </div>
+      </div>
+      <p class="footer-note">This is a fictional organisation created for the WEDE5020
+         Building the Foundation project. Photographs are used under the Unsplash licence.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
